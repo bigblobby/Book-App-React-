@@ -66,7 +66,7 @@ class BookForm extends React.Component {
           />
         </div>
         <button className="btn btn-primary" type="submit">
-          Submit
+          Add Book <i className="fas fa-plus ml-2" />
         </button>
       </form>
     );
