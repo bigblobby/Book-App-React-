@@ -1,0 +1,15 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.header {
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+.header > div {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
