@@ -8,14 +8,13 @@ class BookForm extends React.Component {
   handleSubmit = e => {
     // Prevent page refesh
     e.preventDefault();
-
     // Check if all fields have been filled in
     if (
       this.titleRef.current.value === "" ||
       this.authorRef.current.value === "" ||
       this.isbnRef.current.value === ""
     ) {
-      this.props.showAlert("Please fill out all fields", "danger");
+      this.props.showAlert("Please fill out all fields.", "danger");
       return;
     }
     // Create new book
@@ -26,6 +25,7 @@ class BookForm extends React.Component {
     };
 
     // Add book to App's state
+
     this.props.addBook(book);
 
     // Show add book alert
@@ -37,7 +37,7 @@ class BookForm extends React.Component {
 
   render() {
     return (
-      <form id="book-form" className="mb-5" onSubmit={this.handleSubmit}>
+      <form className="mb-5" onSubmit={this.handleSubmit}>
         <div className="form-group">
           <label htmlFor="title">Title:</label>
           <input

@@ -9,7 +9,8 @@ class App extends React.Component {
     // Set initial state
     this.state = {
       books: [],
-      alertMessage: null
+      alertMessage: null,
+      alertOn: false
     };
   }
 
@@ -56,13 +57,14 @@ class App extends React.Component {
 
   showAlert = (message, type) => {
     // If showAlert has been called do this
-    if (message) {
+    if (!this.state.alertOn) {
       this.setState({
-        alertMessage: <div className={`alert alert-${type}`}>{message}</div>
+        alertMessage: <div className={`alert alert-${type}`}>{message}</div>,
+        alertOn: true
       });
       // Remove the alert notification after 3 seconds and update state
       setTimeout(() => {
-        this.setState({ alertMessage: null });
+        this.setState({ alertMessage: null, alertOn: false });
       }, 3000);
     }
   };

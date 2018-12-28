@@ -9,7 +9,7 @@ class BookList extends React.Component {
         <td>{book.isbn}</td>
         <td>
           <button
-            className="btn btn-danger delete-button"
+            className="btn btn-danger"
             onClick={() => this.props.removeBook(book.isbn)}
           >
             X
@@ -21,7 +21,7 @@ class BookList extends React.Component {
 
   render() {
     return (
-      <table id="book-table" className="table">
+      <table className="table">
         <thead>
           <tr>
             <th scope="col">Title</th>
